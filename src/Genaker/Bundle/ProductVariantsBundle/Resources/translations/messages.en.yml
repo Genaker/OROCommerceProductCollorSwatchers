@@ -1,0 +1,10 @@
+genaker:
+    product_variants:
+        color_variants:
+            label: Color Variants (Product IDs)
+        size_variants:
+            label: Size Variants (Product IDs)
+        color_swatches:
+            label: Color
+        size_swatches:
+            label: Size

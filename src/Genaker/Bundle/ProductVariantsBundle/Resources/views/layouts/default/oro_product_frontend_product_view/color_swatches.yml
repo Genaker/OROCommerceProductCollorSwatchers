@@ -1,0 +1,31 @@
+layout:
+    actions:
+        - '@setBlockTheme':
+            themes: '@GenakerProductVariants/layouts/default/oro_product_frontend_product_view/color_swatches.html.twig'
+        - '@add':
+            id: product_view_color_swatches_container
+            parentId: product_view_line_item_container
+            blockType: container
+            prepend: true
+            options:
+                visible: '=data["genaker_product_variants_color_swatch"].hasAnyVariants(data["product"])'
+        - '@add':
+            id: product_view_color_swatches
+            parentId: product_view_color_swatches_container
+            blockType: block
+        - '@setOption':
+            id: product_view_color_swatches
+            optionName: color_swatches
+            optionValue: '=data["genaker_product_variants_color_swatch"].getColorSwatches(data["product"])'
+        - '@setOption':
+            id: product_view_color_swatches
+            optionName: size_swatches
+            optionValue: '=data["genaker_product_variants_color_swatch"].getSizeSwatches(data["product"])'
+        - '@setOption':
+            id: product_view_color_swatches
+            optionName: label_color
+            optionValue: genaker.product_variants.color_swatches.label
+        - '@setOption':
+            id: product_view_color_swatches
+            optionName: label_size
+            optionValue: genaker.product_variants.size_swatches.label

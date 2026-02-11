@@ -1,0 +1,23 @@
+{
+    "name": "genaker/orocommerce-product-color-swatches",
+    "description": "OroCommerce Color Swatches and Variants extension",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {"name": "Yehor Shytikov", "email": "yehorshytikov@gmail.com"}
+    ],
+    "require": {
+        "php": ">=8.1",
+        "oro/platform": "~6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Genaker\\Bundle\\ProductVariantsBundle\\": "src/Genaker/Bundle/ProductVariantsBundle"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Genaker\\Bundle\\ProductVariantsBundle\\Tests\\": "src/Genaker/Bundle/ProductVariantsBundle/Tests"
+        }
+    }
+}

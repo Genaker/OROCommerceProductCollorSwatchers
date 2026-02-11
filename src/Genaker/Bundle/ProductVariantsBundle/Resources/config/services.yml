@@ -1,0 +1,13 @@
+services:
+    _defaults:
+        public: true
+
+    genaker_product_variants.layout_data_provider.color_swatch:
+        class: Genaker\Bundle\ProductVariantsBundle\Layout\DataProvider\ColorSwatchLayoutDataProvider
+        arguments:
+            - '@doctrine'
+            - '@oro_attachment.manager'
+            - '@oro_product.helper.product_image_helper'
+            - '@router'
+        tags:
+            - { name: layout.data_provider, alias: genaker_product_variants_color_swatch }

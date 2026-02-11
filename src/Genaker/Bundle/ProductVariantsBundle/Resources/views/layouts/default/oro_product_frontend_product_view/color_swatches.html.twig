@@ -1,0 +1,56 @@
+{% block _product_view_color_swatches_container_widget %}
+    {% set attr = layout_attr_defaults(attr, {
+        '~class': ' product-view__color-swatches product-view__variants'
+    }) %}
+    <div {{ block('block_attributes') }}>
+        {{ block_widget(block) }}
+    </div>
+{% endblock %}
+
+{% block _product_view_color_swatches_widget %}
+    {% set color_swatches = block.vars.color_swatches|default([]) %}
+    {% set size_swatches = block.vars.size_swatches|default([]) %}
+    {% set label_color = block.vars.label_color|default('genaker.product_variants.color_swatches.label') %}
+    {% set label_size = block.vars.label_size|default('genaker.product_variants.size_swatches.label') %}
+    <div class="product-view__swatches">
+        {% if color_swatches|length > 0 %}
+            <div class="product-view__swatch-group">
+                <span class="product-view__swatch-label">{{ label_color|trans }}</span>
+                <ul class="product-view__swatch-list">
+                    {% for swatch in color_swatches %}
+                        <li class="product-view__swatch-item">
+                            <a href="{{ swatch.url }}" class="product-view__swatch-link" title="{{ swatch.name }}"
+                               {% if swatch.color %}style="background-color: {{ swatch.color }}"{% endif %}>
+                                {% if swatch.imageUrl %}
+                                    <img src="{{ swatch.imageUrl }}" alt="{{ swatch.name }}" class="product-view__swatch-img" loading="lazy">
+                                {% elseif swatch.color %}
+                                    <span class="product-view__swatch-color"></span>
+                                {% else %}
+                                    <span class="product-view__swatch-text">{{ swatch.name }}</span>
+                                {% endif %}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        {% if size_swatches is defined and size_swatches|length > 0 %}
+            <div class="product-view__swatch-group">
+                <span class="product-view__swatch-label">{{ label_size|trans }}</span>
+                <ul class="product-view__swatch-list product-view__swatch-list--size">
+                    {% for swatch in size_swatches %}
+                        <li class="product-view__swatch-item">
+                            <a href="{{ swatch.url }}" class="product-view__swatch-link product-view__swatch-link--size" title="{{ swatch.name }}">
+                                {% if swatch.imageUrl %}
+                                    <img src="{{ swatch.imageUrl }}" alt="{{ swatch.name }}" class="product-view__swatch-img" loading="lazy">
+                                {% else %}
+                                    <span class="product-view__swatch-text">{{ swatch.name }}</span>
+                                {% endif %}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
