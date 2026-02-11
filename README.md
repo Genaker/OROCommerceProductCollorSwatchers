@@ -2,7 +2,7 @@
 
 ![OroCommerce Product Color Swatches](assets/genaker-product-color-swatches.png)
 
-> **Add native Magento-style color swatches and product variants to your OroCommerce storefront.** Link products by ID, display variant images or text swatches, and improve product discovery with visual variant selection.
+> **Add Magento-style color swatches and product variants to your OroCommerce storefront.** Link products by ID, display variant images or text swatches, and improve product discovery with visual variant selection.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![OroCommerce](https://img.shields.io/badge/OroCommerce-6.1+-green.svg)](https://oroinc.com/)
@@ -12,7 +12,7 @@
 
 ## What Is This?
 
-**OroCommerce Product Color Swatches** is a free, open-source extension that brings **Magento-style color swatches and product variants** to OroCommerce. Instead of complex configurable products, you simply specify product IDs in custom attributes—and the extension displays them as clickable swatches (images or text) on the product page.
+**OroCommerce Product Color Swatches** is a free, open-source extension that brings **Magento-style color swatches and product variants** to OroCommerce. You simply specify product IDs in custom attributes—and the extension displays them as clickable swatches (images or text) on the product page.
 
 Perfect for apparel, shoes, accessories, and any catalog where products come in multiple colors or sizes.
 
@@ -153,13 +153,6 @@ php bin/phpunit src/Genaker/Bundle/ProductVariantsBundle/Tests/Unit -c phpunit.x
 
 ---
 
-## Related Projects
-
-- [Genaker/ProductVariants](https://github.com/Genaker/ProductVariants) – Magento 2 equivalent
-- [Genaker/OROCommerceEmailSMTP](https://github.com/Genaker/OROCommerceEmailSMTP) – OroCommerce SMTP logging
-
----
-
 ## License
 
 MIT © [Genaker](https://github.com/Genaker)
@@ -168,4 +161,4 @@ MIT © [Genaker](https://github.com/Genaker)
 
 ## Keywords
 
-OroCommerce, color swatches, product variants, e-commerce, B2B, product attributes, Magento, swatch extension, product images, variant display
+OroCommerce, color swatches, product variants, e-commerce, B2B, product attributes, Magento-style swatches, product images, variant display
